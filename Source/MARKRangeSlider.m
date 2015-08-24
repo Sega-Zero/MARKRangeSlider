@@ -98,6 +98,8 @@ static NSString * const kMARKRangeSliderTrackRangeImage = @"rangeSliderTrackRang
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
+    
     // Calculate coords & sizes
     CGFloat width = CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
