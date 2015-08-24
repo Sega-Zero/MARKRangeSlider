@@ -206,6 +206,9 @@ static NSString * const kMARKRangeSliderTrackRangeImage = @"rangeSliderTrackRang
 {
     if (!_trackImage) {
         _trackImage = [UIImage imageNamed:kMARKRangeSliderTrackImage];
+        if (!_trackImage && [UIImage respondsToSelector:NSSelectorFromString(@"imageNamed:inBundle:compatibleWithTraitCollection:")]) {
+            _trackImage = [UIImage imageNamed:kMARKRangeSliderTrackImage inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        }
     }
     return _trackImage;
 }
@@ -214,6 +217,9 @@ static NSString * const kMARKRangeSliderTrackRangeImage = @"rangeSliderTrackRang
 {
     if (!_rangeImage) {
         _rangeImage = [UIImage imageNamed:kMARKRangeSliderTrackRangeImage];
+        if (!_rangeImage && [UIImage respondsToSelector:NSSelectorFromString(@"imageNamed:inBundle:compatibleWithTraitCollection:")]) {
+            _rangeImage = [UIImage imageNamed:kMARKRangeSliderTrackRangeImage inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        }
     }
     return _rangeImage;
 }
@@ -222,6 +228,9 @@ static NSString * const kMARKRangeSliderTrackRangeImage = @"rangeSliderTrackRang
 {
     if (!_leftThumbImage) {
         _leftThumbImage = [UIImage imageNamed:kMARKRangeSliderThumbImage];
+        if (!_leftThumbImage && [UIImage respondsToSelector:NSSelectorFromString(@"imageNamed:inBundle:compatibleWithTraitCollection:")]) {
+            _leftThumbImage = [UIImage imageNamed:kMARKRangeSliderThumbImage inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        }
     }
     return _leftThumbImage;
 }
@@ -230,6 +239,9 @@ static NSString * const kMARKRangeSliderTrackRangeImage = @"rangeSliderTrackRang
 {
     if (!_rightThumbImage) {
         _rightThumbImage = [UIImage imageNamed:kMARKRangeSliderThumbImage];
+        if (!_rightThumbImage && [UIImage respondsToSelector:NSSelectorFromString(@"imageNamed:inBundle:compatibleWithTraitCollection:")]) {
+            _rightThumbImage = [UIImage imageNamed:kMARKRangeSliderThumbImage inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        }
     }
     return _rightThumbImage;
 }
